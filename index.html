@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="addons/styles.css">
+		<script src="https://kit.fontawesome.com/eb4992df6c.js" crossorigin="anonymous"></script>
+		<title>Решение сложных математических задач</title>
+	</head>
+	<body>
+		<script src='da.js'></script>
+		<header class="header_inner">
+			<div class="header">
+				<div class="header_text">
+					<a class="header_logo">Решение сложных математических задач</a>
+				</div>
+			</div>
+		<div class="example_container">
+			<div class="example">
+					<a href="#" target="_blank" class="example_text">Решение матричной таблицы</a>
+					<a href="#" target="_blank" class="example_img"><img class="exampleIMG" src="addons/matric.png" alt="Решение матричной таблицы"></a> 
+			</div>
+			<div class="example">
+					<a href="log.html" class="example_text"> Решение логарифмов </a>
+					<a href="log.html" class="example_img" onclick=""><img src="addons/log.svg" alt=""></a>
+			</div>
+		</div>
+		</header>
+		<main class="main">
+			<h1 class="h1">
+			Матричная таблица
+			</h1>
+			
+			<p id="select"> Размер таблицы
+				<select size="1" style="width: 50px" id="selectSize" name="size" onchange="changeTableSize()">
+					<option id="2x2" value="2">2x2</option>
+					<option id="3x3" selected value="3">3x3</option>
+					<option id="4x4" value="4">4x4</option>
+				</select>
+			</p>
+			<div class="table_container">
+				<div id="det" class="hidden">det</div>
+				<div id="tableName" class="hidden">A =</div>
+				<table id="table" cellpadding="0" cellspacing="0" rules="none">
+					<tr class="line1" align="center">
+						<td class="col1">
+							<input type="text" placeholder="0" id="a11" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col2">
+							<input type="text" placeholder="0" id="a12" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col3">
+							<input type="text" placeholder="0" id="a13" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+					</tr>
+					<tr class="line2" align="center">
+						<td class="col1">
+							<input type="text" placeholder="0" id="a21" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col2">
+							<input type="text" placeholder="0" id="a22" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col3">
+							<input type="text" placeholder="0" id="a23" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+					</tr>
+					<tr class="line3" align="center">
+						<td class="col1">
+							<input type="text" placeholder="0" id="a31" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col2">
+							<input type="text" placeholder="0" id="a32" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col3">
+							<input type="text" placeholder="0" id="a33" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+					</tr>
+				</table>
+				<!-- TABLE A 2x2 -->
+				<table id="tableA2x2" cellpadding="0" cellspacing="0" rules="none" class="hidden">
+					<tr class="line1" align="center">
+						<td class="col1_2x2">
+							<input type="text" placeholder="0" id="a11s2x2" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col2_2x2">
+							<input type="text" placeholder="0" id="a12s2x2" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+					</tr>
+					<tr class="line2" align="center">
+						<td class="col1_2x2">
+							<input type="text" placeholder="0" id="a21s2x2" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col2_2x2">
+							<input type="text" placeholder="0" id="a22s2x2" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+					</tr>
+				</table>
+				<!-- TABLE A 2x2 -->
+				<!-- TABLE A 4x4 -->
+				<table id="tableA4x4" cellpadding="0" cellspacing="0" rules="none" class="hidden">
+					<tr class="line1" align="center">
+						<td class="col1_4x4">
+							<input type="text" placeholder="0" id="a11s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col2_4x4">
+							<input type="text" placeholder="0" id="a12s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col3_4x4">
+							<input type="text" placeholder="0" id="a13s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col4_4x4">
+							<input type="text" placeholder="0" id="a14" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+					</tr>
+					<tr class="line2" align="center">
+						<td class="col1_4x4">
+							<input type="text" placeholder="0" id="a21s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col2_4x4">
+							<input type="text" placeholder="0" id="a22s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col3_4x4">
+							<input type="text" placeholder="0" id="a23s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col4_4x4">
+							<input type="text" placeholder="0" id="a24" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+					</tr>
+					<tr class="line3" align="center">
+						<td class="col1_4x4">
+							<input type="text" placeholder="0" id="a31s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col2_4x4">
+							<input type="text" placeholder="0" id="a32s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+						</td>
+						<td class="col3_4x4">
+							<input type="text" placeholder="0" id="a33s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+							<td class="col4_4x4">
+								<input type="text" placeholder="0" id="a34" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+							</td>
+						</tr>
+						<tr class="line4" align="center">
+							<td class="col1_4x4">
+								<input type="text" placeholder="0" id="a41" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+							</td>
+							<td class="col2_4x4">
+								<input type="text" placeholder="0" id="a42" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+							</td>
+							<td class="col3_4x4">
+								<input type="text" placeholder="0" id="a43" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								<td class="col4_4x4">
+									<input type="text" placeholder="0" id="a44" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+							</tr>
+						</table>
+						<!-- TABLE A 4x4 -->
+						<div id="transResult" class="hidden">, A <sup>T</sup> </div>
+						<div id="fasTimes" class="hidden"><i class="fas fa-times"></i></div>
+						<div id ="faminus" class="sign_icon hidden"><i class="fas fa-minus"></i></div>
+						<div id="faplus" class="sign_icon hidden"><i class="fas fa-plus"></i></div>
+						<div class="hidden" id="inverseTable"><sup>-1</sup></div>
+						<table id="tableB" cellpadding="0" cellspacing="0" rules="none">
+							<tr class="line1_B" align="center">
+								<td class="col1">
+									<input type="text" placeholder="0" id="b11" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col2">
+									<input type="text" placeholder="0" id="b12" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col3">
+									<input type="text" placeholder="0" id="b13" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+							</tr>
+							<tr class="line2_B" align="center">
+								<td class="col1">
+									<input type="text" placeholder="0" id="b21" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col2">
+									<input type="text" placeholder="0" id="b22" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col3">
+									<input type="text" placeholder="0" id="b23" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+							</tr>
+							<tr class="line3_B" align="center">
+								<td class="col1">
+									<input type="text" placeholder="0" id="b31" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col2">
+									<input type="text" placeholder="0" id="b32" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col3">
+									<input type="text" placeholder="0" id="b33" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+							</tr>
+						</table>
+						<!-- TABLE B 2x2 -->
+						<table id="tableB2x2" cellpadding="0" cellspacing="0" rules="none" class="hidden">
+							<tr class="line1" align="center">
+								<td class="col1_2x2">
+									<input type="text" placeholder="0" id="b11s2x2" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col2_2x2">
+									<input type="text" placeholder="0" id="b12s2x2" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+							</tr>
+							<tr class="line2" align="center">
+								<td class="col1_2x2">
+									<input type="text" placeholder="0" id="b21s2x2" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col2_2x2">
+									<input type="text" placeholder="0" id="b22s2x2" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+							</tr>
+						</table>
+						<!-- TABLE B 2x2 -->
+						<!-- TABLE B 4x4 -->
+						<table id="tableB4x4" cellpadding="0" cellspacing="0" rules="none" class="hidden">
+							<tr class="line1" align="center">
+								<td class="col1_4x4">
+									<input type="text" placeholder="0" id="b11s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col2_4x4">
+									<input type="text" placeholder="0" id="b12s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col3_4x4">
+									<input type="text" placeholder="0" id="b13s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col4_4x4">
+									<input type="text" placeholder="0" id="b14" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+							</tr>
+							<tr class="line2" align="center">
+								<td class="col1_4x4">
+									<input type="text" placeholder="0" id="b21s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col2_4x4">
+									<input type="text" placeholder="0" id="b22s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col3_4x4">
+									<input type="text" placeholder="0" id="b23s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col4_4x4">
+									<input type="text" placeholder="0" id="b24" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+							</tr>
+							<tr class="line3" align="center">
+								<td class="col1_4x4">
+									<input type="text" placeholder="0" id="b31s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col2_4x4">
+									<input type="text" placeholder="0" id="b32s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+								</td>
+								<td class="col3_4x4">
+									<input type="text" placeholder="0" id="b33s4x4" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+									<td class="col4_4x4">
+										<input type="text" placeholder="0" id="b34" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+									</td>
+								</tr>
+								<tr class="line4" align="center">
+									<td class="col1_4x4">
+										<input type="text" placeholder="0" id="b41" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+									</td>
+									<td class="col2_4x4">
+										<input type="text" placeholder="0" id="b42" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+									</td>
+									<td class="col3_4x4">
+										<input type="text" placeholder="0" id="b43" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+										<td class="col4_4x4">
+											<input type="text" placeholder="0" id="b44" onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+										</td>
+									</tr>
+								</table>
+								
+								<!-- TABLE B 4x4 -->
+								<input id="X" type="text" class="hidden"placeholder="X">
+								
+								<div id="fas_equals" class="hidden"><i class="fas fa-equals"></i></div>
+								<div id="detA" class="hidden">
+								</div>
+								<div id="numX" class="hidden">
+								</div>
+								<div id="inversed" class="hidden">
+									A<sup>-1</sup> =
+								</div>
+								<table id="tableC" class="hidden" cellpadding="0" cellspacing="0" rules="none">
+									<tr class="line1_c" align="center">
+										<td class="col1_C">
+											<p id="c11"></p>
+										</td>
+										<td class="col2_C">
+											<p id="c12"></p>
+										</td>
+										<td class="col3_C">
+											<p id="c13"></p>
+										</td>
+									</tr>
+									<tr class="line2_C" align="center">
+										<td class="col1_C">
+											<p id="c21"></p>
+										</td>
+										<td class="col2_C">
+											<p id="c22"></p>
+										</td>
+										<td class="col3_C">
+											<p id="c23"></p>
+										</td>
+									</tr>
+									<tr class="line3_C" align="center">
+										<td class="col1_C">
+											<p id="c31"></p>
+										</td>
+										<td class="col2_C">
+											<p id="c32"></p>
+										</td>
+										<td class="col3_C">
+											<p id="c33"></p>
+										</td>
+									</tr>
+								</table>
+								<!-- Table C 2x2 -->
+								<table id="tableC2x2" class="hidden" cellpadding="0" cellspacing="0" rules="none">
+									<tr class="line1_c" align="center">
+										<td class="col1_C">
+											<p id="c11s2x2"> </p>
+										</td>
+										<td class="col2_C">
+											<p id="c12s2x2"> </p>
+										</td>
+									</tr>
+									<tr class="line2_C" align="center">
+										<td class="col1_C">
+											<p id="c21s2x2"> </p>
+										</td>
+										<td class="col2_C">
+											<p id="c22s2x2"> </p>
+										</td>
+									</tr>
+								</table>
+								<!-- Table C 2x2 -->
+								<!-- TABLE C 4x4 -->
+								<table id="tableC4x4" class="hidden" cellpadding="0" cellspacing="0" rules="none">
+									<tr class="line1_c" align="center">
+										<td class="col1_C">
+											<p id="c11s4x4"></p>
+										</td>
+										<td class="col2_C">
+											<p id="c12s4x4"></p>
+										</td>
+										<td class="col3_C">
+											<p id="c13s4x4"></p>
+										</td>
+										<td class="col3_C">
+											<p id="c14"></p>
+										</td>
+									</tr>
+									<tr class="line2_C" align="center">
+										<td class="col1_C">
+											<p id="c21s4x4"></p>
+										</td>
+										<td class="col2_C">
+											<p id="c22s4x4"></p>
+										</td>
+										<td class="col3_C">
+											<p id="c23s4x4"></p>
+										</td>
+										<td class="col3_C">
+											<p id="c24"></p>
+										</td>
+									</tr>
+									<tr class="line3_C" align="center">
+										<td class="col1_C">
+											<p id="c31s4x4"></p>
+										</td>
+										<td class="col2_C">
+											<p id="c32s4x4"></p>
+										</td>
+										<td class="col3_C">
+											<p id="c33s4x4"></p>
+										</td>
+										<td class="col4_C">
+											<p id="c34"></p>
+										</td>
+									</tr>
+									<tr class="line4_C" align="center">
+										<td class="col1_C">
+											<p id="c41"></p>
+										</td>
+										<td class="col2_C">
+											<p id="c42"></p>
+										</td>
+										<td class="col3_C">
+											<p id="c43"></p>
+										</td>
+										<td class="col4_C">
+											<p id="c44"></p>
+										</td>
+									</tr>
+								</table>
+							</table>
+							<!-- TABLE C 4x4 -->
+							</div> <!-- table container !-->
+	<div class="container2 hidden" id="container">
+	<div id="logcontainer">
+		<div class="log" id="log1">
+			log
+		<sub> 
+			<input class="base" id="base1" type="text"> </input> 
+		</sub>
+			<input class="number" id="number1" type="text"></input>
+		</div>
+	</div>
+	<div class="equals hidden" onclick="equals()">
+	= 
+	</div>
+	<div class="loganswer hidden">
+		
+	</div>
+</div>
+							<div class="buttons">
+								<button class="button" button onclick="onClickPlus()">
+								<p>A</p>
+								<div class="sign_icon"><i class="fas fa-plus"></i></div>
+								<p class="button_name">B</p>
+								</button>
+								<button class="button" onclick="onClickMinus()">
+								<p>A</p>
+								<div class="sign_icon"><i class="fas fa-minus"></i></div>
+								<p class="button_name">B</p>
+								</button>
+								<button class="button" onclick="onClickTimes()">
+								<p>A</p>
+								<div class="sign_icon"><i class="fas fa-times"></i></div>
+								<p class="button_name">B</p>
+								</button>
+								<button class="button" onclick="onClickTimesX()">
+								<p>A</p>
+								<div class="sign_icon"><i class="fas fa-times"></i></div>
+								<p class="button_name">X</p>
+								</button>
+								<button class="button" onclick="onClickDet()">
+								<p class="detA">detA</p>
+								</button>
+								<button class="button" onclick="onClickTransport()">
+								<div class="transport">
+									<p>A<sup>T</sup></p>
+								</div>
+								</button>
+								<button class="button" onclick="onClickInverse()">
+								<div class="transport">
+									<p>A<sup>-1</sup></p>
+								</div>
+								</button>
+								<button id="equalsButton" class="equalsButton button" onclick="calcTables()">
+								<div class="sign_icon equals"><i class="fas fa-equals"></i></div>
+								</button>
+							</div>
+						</div>
+
+						
+						</main> <!-- Main -->
+					</main>
+					<footer class="footer">
+						<div class="copyright">
+							Copyright © 2020. All Rights Reserved
+						</div>
+						</footer>
+
+						</body>
+</html>
