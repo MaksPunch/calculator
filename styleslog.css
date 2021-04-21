@@ -187,6 +187,9 @@ body
 {
     display: flex;
     flex-direction: column;
+
+    align-items: center;
+
 }
 
 .h1
@@ -561,13 +564,16 @@ input[type="text"]::-webkit-input-placeholder {
 }
 
 .base {
-    margin-top: 2px !important;
-    font-size: 10px !important;
-    width: 12px !important;
+    margin-left: -6px !important;
+    font-size: 13px !important;
+    width: 20px !important;
+
+    background-color: transparent;
+
 }
 .number {
-    font-size: 14px !important;
-    width: 24px !important;
+    font-size: 18px !important;
+    width: 41px !important;
     min-width: 24px !important;
 }
 
@@ -582,6 +588,10 @@ input[type="text"]::-webkit-input-placeholder {
 
 .container2 {
     display: flex;
+
+    margin-top: 10px;
+
+    font-size: 20px;
 }
 
 /* @media */ 

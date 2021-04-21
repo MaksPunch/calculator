@@ -1,17 +1,12 @@
 'use strict'; 
 
-function onKeyArrows() {
-	if (keyCode == "38") {
-	
-	} else if (keyCode == "40") {
-		
-	} else if (keyCode == "39") {
-		
-	} else if (keyCode == "37") {
-		
-	} else {
-		return;
-	}
+function changeTaskLog() {
+    let logContainer = document.querySelector('#container');
+    let tableContainer = document.querySelector('.table_container');
+
+    logContainer.classList.remove('hidden');
+    tableContainer.classList.add('hidden');
+
 }
 
 function changeTableSize() {
@@ -40,6 +35,8 @@ function changeTableSize() {
 
     let e = document.getElementById("selectSize");
     let selValue = e.value;
+
+console.log(tableA);
 
     op = '';
 
@@ -128,7 +125,6 @@ function changeTableSize() {
     }
 
 }
-
 
 let op;
   function calcTables() {

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styleslog.css">
+</head>
+<body>
+	<script src="logjs.js"></script>
+	<header class="header_inner">
+			<div class="header">
+				<div class="header_text">
+					<a class="header_logo">Решение сложных математических задач</a>
+				</div>
+			</div>
+		<div class="example_container">
+			<div class="example">
+					<a href="" class="example_text">Решение матричной таблицы</a>
+					<a href="#" class="example_img"><img class="exampleIMG" src="addons/matric.png" alt="Решение матричной таблицы"></a> 
+			</div>
+			<div class="example">
+					<a href="#" class="example_text"> Решение логарифмов </a>
+					<a href="#" class="example_img" onclick=""><img src="addons/log.svg" alt=""></a>
+			</div>
+		</div>
+		</header>
+<main class="main">
+<div class="container2">
+	<div id="logcontainer">
+		<div class="log" id="log1">
+			log
+		<sub> 
+			<input class="base" id="base1" type="text"> </input> 
+		</sub>
+			<input class="number" id="number1" type="text"></input>
+		</div>
+	</div>
+	<div class="equals hidden" onclick="equals()">
+	= 
+	</div>
+	<div class="loganswer hidden">
+		
+	</div>
+</div>
+
+	<button class="button" id="button" onclick="equals()">
+		=
+	</button>
+</main>
+	<footer class="footer">
+			<div class="copyright">
+				Copyright © 2020. All Rights Reserved
+			</div>
+	</footer>
+</body>
+</html>
