@@ -36,7 +36,6 @@ function changeTableSize() {
     let e = document.getElementById("selectSize");
     let selValue = e.value;
 
-console.log(tableA);
 
     op = '';
 
