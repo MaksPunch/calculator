@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Стереометрия</title>
+	<script src="https://kit.fontawesome.com/eb4992df6c.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="stylesster.css">
+</head>
+<body>
+	<script src="sterjs.js"></script>
+<header class="header_inner">
+			<div class="header">
+				<div class="header_text">
+					<a class="header_logo">Решение сложных математических задач</a>
+				</div>
+			</div>
+		<div class="example_container">
+			<div class="example">
+					<a href="index.html" class="example_text">Решение матричной таблицы</a>
+					<a href="index.html" class="example_img">
+					<img class="exampleIMG" src="addons/matric.png">
+					</a> 
+			</div>
+			<div class="example">
+					<a href="log.html" class="example_text"> Решение логарифмов 
+					</a>
+					<a href="log.html" class="example_img">
+					<img src="addons/log.svg" alt="">
+					</a>
+			</div>
+			<div class="example">
+				<a href="stereometry.html" class="example_text">Задачи из стереометрии
+				</a>
+					<a href="stereometry.html" class="example_img">
+					<img src="addons/stereometry.png">
+					</a>
+			</div>
+		</div>
+</header>
+
+<main class="main">
+	<p id="select" align="left"> Фигура
+				<select size="1" style="width: 247px" id="selectSize" name="size" onchange="changeFigure()">
+					<option value="Cube">Куб</option>
+					<option value="Prisma">Правильная призма</option>
+					<option value="Parallelepiped">Прямоугольный параллелепипед</option>
+				</select>
+	</p>
+	<div id="Cube">
+		<img src="addons/cube.png" alt="" id="CubeImg">
+			<div id="CubeCalc">
+			<p class="CubeSide">Грань a = <input type="text" id="CubeEdges"></p>
+			<p id="CubeArea" class="hidden"></p>
+			<p id="CubeVolume" class="hidden"></p>
+			<p id="CubeDiag" class="hidden"></p>
+				<button id="equalsButton" class="equalsButton button" onclick="calculateCube()">
+				<div class="sign_icon equals"><i class="fas fa-equals"></i></div>
+				</button>
+			</div>
+	</div>
+	<div id="Prisma" class="hidden">
+		<div class="selectEdge">
+			<p class="selectText">Выберите вид призмы</p>
+			<select size="3" name="Edges" id="selectEdges" onchange="changeEdges()">
+				<option value="3">Треугольная призма</option>
+				<option value="4">Четырехугольная призма</option>
+				<option value="6">Шестиугольная призма</option>
+			</select>
+		</div>
+<img src="addons/3angPrism.png" class="hidden" id="threeAngPrism" alt="">
+<img src="addons/4angPrism.png" class="hidden" id="fourAngPrism" alt="">
+<img src="addons/6angPrism.png" class="hidden" id="sixAngPrism" alt="">
+<div id="PrismCalc">
+			<div id="threeAng" class="hidden">
+				<p class="PrismSide">Грань a = <input type="text" id="PrismThreeEdge"></p>
+				<p class="PrismSide">Высота h = <input type="text" id="PrismHeightThree"></p>
+				<p id="PrismSoThree"></p>
+				<p id="PrismSbThree"></p>
+				<p id="PrismSThree"></p>
+			</div>
+			<div id="fourAng" class="hidden">			
+				<p class="PrismSide">Грань a = <input type="text" id="PrismFourEdge"></p>
+				<p class="PrismSide">Высота h = <input type="text" id="PrismHeightFour"></p>
+				<p id="PrismSoFour"></p>
+				<p id="PrismSbFour"></p>
+				<p id="PrismSFour"></p>
+			</div>
+			<div id="sixAng" class="hidden">			
+				<p class="PrismSide">Грань a = <input type="text" id="PrismSixEdge"></p>
+				<p class="PrismSide">Высота h = <input type="text" id="PrismHeightSix"></p>
+				<p id="PrismSoSix" ></p>
+				<p id="PrismSbSix"></p>
+				<p id="PrismSSix"></p>
+		</div>
+		<p id="PrismVolume" class="hidden"></p>
+				<button id="equalsButton" class="equalsButton button" onclick="calculatePrism()">
+				<div class="sign_icon equals"><i class="fas fa-equals"></i></div>
+				</button>
+</div>
+	</div>
+	<div id="Parallelepiped" class="hidden">
+				<img src="addons/parallelepiped.png" id="parallelepipedImg" alt="">
+				<div id="ParCalc">
+						<div id="ParInputs">
+						<p class="ParSide">Грань a = <input type="text" id="ParEdgeA">, </p>
+						<p class="ParSide">Грань b = <input type="text" id="ParEdgeB">, </p>
+						<p class="ParSide">Грань c = <input type="text" id="ParEdgeC"></p>
+						</div>
+					<p id="SoPar" class="hidden"></p>
+					<p id="SbPar" class="hidden"></p>
+					<p id="SPar" class="hidden"></p>
+					<p id="Vpar" class="hidden"></p>
+					<p id="dPar" class="hidden"></p>
+				<button id="equalsButton" class="equalsButton button" onclick="calculateParallelepiped()">
+				<div class="sign_icon equals"><i class="fas fa-equals"></i></div>
+				</button>
+				</div>
+	</div>
+	<footer class="footer">
+			<div class="copyright">
+				Copyright © 2021. All Rights Reserved
+			</div>
+	</footer>
+</main>
+</body>
+</html>
