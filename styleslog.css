@@ -203,87 +203,7 @@ body
 }
 
 #select {
-    margin-left: 20px;
-}
-
-/* Table */
-.table_container {
-    display: flex;
-    flex-direction: row;
-
-    margin-left: 25px;
-}
-
-#det {
-    margin: auto 0;
-}
-
-#tableName {
-    margin: auto 0;
-}
-
-#inversed {
-    margin: auto 0;
-    margin-left: 10px;
-}
-
-#transResult {
-    margin: auto 0;
-    margin-left: 5px;
-}
-
-#numX {
-    margin: auto 0;
-    margin-left: 5px;
-}
-
-
-#table {    
-    width: 250px;
-    height: 18vh;
-
-    border: none;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    border-radius: 10px;
-    border-collapse: separate !important;
-    border-spacing: 10px;
-
-    padding: 0;
-
-    margin-left: 10px;
-}
-
-#tableA2x2 {    
-    width: 250px;
-    height: 18vh;
-
-    border: none;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    border-radius: 10px;
-    border-collapse: separate !important;
-    border-spacing: 10px;
-
-    padding: 0;
-
-    margin-left: 10px;
-}
-
-#tableA4x4 {    
-    width: 250px;
-    height: 18vh;
-
-    border: none;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    border-radius: 10px;
-    border-collapse: separate !important;
-    border-spacing: 10px;
-
-    padding: 0;
-
-    margin-left: 10px;
+    margin-left: 20px;  
 }
 
 input[type="text"] {
@@ -311,126 +231,6 @@ input[type="text"]::-webkit-input-placeholder {
     color: #000;
 }
 
-.col1
-{
-    width: 34%;
-}
-
-.col2
-{
-    width: 33%;
-}
-
-.col3
-{
-    width: 33%;
-}
-
-.col4 {
-    width: 25%;
-}
-
-#inverseTable {
-    margin-left: 5px;
-}
-
-.table_container_B {
-    display: flex;
-    flex-direction: row;
-
-    margin-left: 25px;
-}
-
-#tableB {    
-    width: 250px;
-    height: 18vh;
-
-    border: none;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    border-radius: 10px;
-    border-collapse: separate !important;
-    border-spacing: 10px;
-
-    padding: 0;
-
-    margin-left: 10px;
-}
-
-#tableB2x2 {    
-    width: 250px;
-    height: 18vh;
-
-    border: none;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    border-radius: 10px;
-    border-collapse: separate !important;
-    border-spacing: 10px;
-
-    padding: 0;
-
-    margin-left: 10px;
-}
-
-#tableB4x4 {    
-    width: 250px;
-    height: 18vh;
-
-    border: none;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    border-radius: 10px;
-    border-collapse: separate !important;
-    border-spacing: 10px;
-
-    padding: 0;
-
-    margin-left: 10px;
-}
-
-#X {    
-    width: 24px;
-    height: 25px;
-
-    padding: 0;
-
-    margin-left: 13px;
-    margin-top: 44px;
-}
-
-.fas {
-    margin: auto 0;
-    margin-left: 5px;
-
-
-    color: #000;
-}
-
-#fasTimes {
-    margin: auto 0;
-    margin-left: 5px;
-
-
-    color: #000;
-}
-
-#faplus {
-    margin: auto 0;
-    margin-left: 5px;
-
-
-    color: #000;
-}
-
-#faminus {
-    margin: auto 0;
-    margin-left: 5px;
-
-
-    color: #000;
-}
-
 #fas_equals {
     margin: auto 0;
     margin-left: 6px;
@@ -438,67 +238,6 @@ input[type="text"]::-webkit-input-placeholder {
 
     color: #000;
 }
-
-
-#tableC {    
-    width: 250px;
-    height: 18vh;
-
-    border: none;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    border-radius: 10px;
-    border-collapse: separate !important;
-    border-spacing: 10px;
-
-    padding: 0;
-
-    margin-left: 10px;
-    font-size: 16px;
-}
-
-#tableC2x2 {    
-    width: 250px;
-    height: 18vh;
-
-    border: none;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    border-radius: 10px;
-    border-collapse: separate !important;
-    border-spacing: 10px;
-
-    padding: 0;
-
-    margin-left: 10px;
-    font-size: 16px;
-}
-
-#tableC4x4 {    
-    width: 250px;
-    height: 18vh;
-
-    border: none;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-    border-radius: 10px;
-    border-collapse: separate !important;
-    border-spacing: 10px;
-
-    padding: 0;
-
-    margin-left: 10px;
-    font-size: 16px;
-}
-
-
-#detA {
-    margin: auto 0 auto 15px;
-    font-size: 16px;
-    padding: 0;
-}
-
-
 /* Buttons */
 
 .buttons {
@@ -532,14 +271,6 @@ input[type="text"]::-webkit-input-placeholder {
     margin: auto 8px;
 }
 
-.detA {
-    margin: auto;
-}
-
-.transport {
-    margin: auto;
-}
-
 /* Footer */
 
 .footer {
@@ -559,10 +290,7 @@ input[type="text"]::-webkit-input-placeholder {
     margin: auto;
 }
 
-.easteregg {
-    font-size: 5px;
-}
-
+/*Log*/
 .base {
     margin-left: -6px !important;
     font-size: 13px !important;
