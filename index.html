@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="styles.css">
 		<script src="https://kit.fontawesome.com/eb4992df6c.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 		<title>Решение сложных математических задач</title>
 	</head>
 	<body>
@@ -425,41 +427,40 @@
 	</div>
 </div>
 							<div class="buttons">
-								<button class="button" button onclick="onClickPlus()">
-								<p>A</p>
-								<div class="sign_icon"><i class="fas fa-plus"></i></div>
+								<button class="bttn-simple bttn-sm bttn-primary" button onclick="onClickPlus()">
+								<p>A + </p>
+							
 								<p class="button_name">B</p>
 								</button>
-								<button class="button" onclick="onClickMinus()">
-								<p>A</p>
-								<div class="sign_icon"><i class="fas fa-minus"></i></div>
+								<button class="bttn-simple bttn-sm bttn-primary" onclick="onClickMinus()">
+								<p>A -</p>
 								<p class="button_name">B</p>
 								</button>
-								<button class="button" onclick="onClickTimes()">
-								<p>A</p>
-								<div class="sign_icon"><i class="fas fa-times"></i></div>
+								<button class="bttn-simple bttn-sm bttn-primary" onclick="onClickTimes()">
+								<p>A * </p>
+								
 								<p class="button_name">B</p>
 								</button>
-								<button class="button" onclick="onClickTimesX()">
-								<p>A</p>
-								<div class="sign_icon"><i class="fas fa-times"></i></div>
+								<button class="bttn-simple bttn-sm bttn-primary" onclick="onClickTimesX()">
+								<p>A * </p>
+								
 								<p class="button_name">X</p>
 								</button>
-								<button class="button" onclick="onClickDet()">
+								<button class="bttn-simple bttn-sm bttn-primary" onclick="onClickDet()">
 								<p class="detA">detA</p>
 								</button>
-								<button class="button" onclick="onClickTransport()">
+								<button class="bttn-simple bttn-sm bttn-primary bttn-flex" onclick="onClickTransport()">
 								<div class="transport">
-									<p>A<sup>T</sup></p>
+									<p>A<a><sup>T</sup></a></p>
 								</div>
 								</button>
-								<button class="button" onclick="onClickInverse()">
+								<button class="bttn-simple bttn-sm bttn-primary bttn-flex" onclick="onClickInverse()">
 								<div class="transport">
 									<p>A<sup>-1</sup></p>
 								</div>
 								</button>
-								<button id="equalsButton" class="equalsButton button" onclick="calcTables()">
-								<div class="sign_icon equals"><i class="fas fa-equals"></i></div>
+								<button id="equalsButton" class="bttn-simple bttn-sm bttn-primary" onclick="calcTables()">
+								<p><bold>=</bold></p>
 								</button>
 							</div>
 						</div>
@@ -467,11 +468,5 @@
 						
 						</main> <!-- Main -->
 					</main>
-					<footer class="footer">
-						<div class="copyright">
-							Copyright © 2021. All Rights Reserved
-						</div>
-						</footer>
-
 						</body>
 </html>
