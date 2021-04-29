@@ -1,6 +1,6 @@
 body
 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;;
     font-size: 16px;
 
     margin: 0;
@@ -207,6 +207,7 @@ body
 }
 
 input[type="text"] {
+    font-family: 'Montserrat', sans-serif !important;
     font-size: 16px;
 
     width: 80%; 
@@ -322,6 +323,170 @@ input[type="text"]::-webkit-input-placeholder {
     font-size: 20px;
 }
 
+.header_inner {
+    background: linear-gradient(179deg, #00fdff, #47fb95);
+    background-size: 400% 400%;
+
+    -webkit-animation: header_inner 5s ease infinite;
+    -moz-animation: header_inner 5s ease infinite;
+    -o-animation: header_inner 5s ease infinite;
+    animation: header_inner 5s ease infinite;
+}
+
+@-webkit-keyframes header_inner {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes header_inner {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-o-keyframes header_inner {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes header_inner {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+
+.bttn-default {
+  color: #fff;
+}
+.bttn-primary,
+.bttn,
+.bttn-lg,
+.bttn-md,
+.bttn-sm,
+.bttn-xs {
+  color: #479fff;
+}
+.bttn-warning {
+  color: #feab3a;
+}
+.bttn-danger {
+  color: #ff5964;
+}
+.bttn-success {
+  color: #28b78d;
+}
+.bttn-royal {
+  color: #bd2df5;
+}
+.bttn,
+.bttn-lg,
+.bttn-md,
+.bttn-sm,
+.bttn-xs {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-color: transparent;
+  background: transparent;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+}
+.bttn-lg {
+  padding: 8px 15px;
+  font-size: 24px;
+  font-family: inherit;
+}
+.bttn-md {
+  font-size: 14px;
+  font-family: inherit;
+  padding: 5px 12px;
+}
+.bttn-sm {
+  display: flex;
+  flex-direction: row;
+  padding: 4px 10px;
+  font-size: 16px;
+  font-family: inherit;
+  width: 75px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px !important;
+  margin-top: 10px !important;
+  outline: none;
+}
+.bttn-xs {
+  padding: 3px 8px;
+  font-size: 12px;
+  font-family: inherit;
+}
+.bttn-simple {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-color: transparent;
+  background: transparent;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+  font-family: inherit;
+  padding: 5px 12px;
+  border-width: 0;
+  border-radius: 35px;
+  background: rgba(255,255,255,0.4);
+  color: #fff;
+  -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+.bttn-simple:hover {
+  background: #6eb3ff !important;
+}
+.bttn-simple:focus {
+    background: #2762a3 !important;
+}
+.bttn-simple.bttn-xs {
+  padding: 3px 8px;
+  font-size: 12px;
+  font-family: inherit;
+}
+.bttn-simple.bttn-sm {
+  padding: 4px 10px;
+  font-size: 16px;
+  font-family: inherit;
+}
+.bttn-simple.bttn-md {
+  font-size: 14px;
+  font-family: inherit;
+  padding: 5px 12px;
+}
+.bttn-simple.bttn-lg {
+  padding: 8px 15px;
+  font-size: 24px;
+  font-family: inherit;
+}
+.bttn-simple.bttn-default {
+  background: rgba(255,255,255,0.4);
+}
+.bttn-simple.bttn-primary {
+  background: #479fff;
+}
+.bttn-simple.bttn-warning {
+  background: #feab3a;
+}
+.bttn-simple.bttn-danger {
+  background: #ff5964;
+}
+.bttn-simple.bttn-success {
+  background: #28b78d;
+}
+.bttn-simple.bttn-royal {
+  background: #bd2df5;
+}
+
+.bttn-flex p {
+    margin: 0;
+}
 /* @media */ 
 
 @media screen {
